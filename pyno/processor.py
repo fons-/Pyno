@@ -51,7 +51,7 @@ class Processor():
                 self.problem_desc = "Runtime error: " + str(ex)
             self.problem = True
         else:
-            if isinstance(result, Tuple) and len(outputs) > 1:
+            if type(result) is Tuple and len(outputs) > 1:
                 for output in outputs:
                     item = result[outputs.index(output)]
                     get_outputs[output] = item  # tuple output
